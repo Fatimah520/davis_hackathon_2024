@@ -79,8 +79,6 @@ header {
   display: flex;
   padding: 10px;
   gap: 10%; /* Adjust the value to increase or decrease the spacing */
-  padding-top: 13%;
-  padding-bottom: 100%;
 }
 
 .losta, .founda {
@@ -152,7 +150,6 @@ button {
 .survey-options {
   display: flex;
   justify-content: center;
-  margin-bottom: 100%;
 }
 
 .option {

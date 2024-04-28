@@ -14,67 +14,57 @@ function handleLost() {
     surveyContainer.style.justifyContent = 'center'; // Center horizontally
     surveyContainer.style.alignItems = 'center'; // Center vertically
     surveyContainer.classList.add('animate', 'move-in');
+
+    // Scroll down to the gender section
+    const genderSection = document.getElementById('gender-section');
+    genderSection.scrollIntoView({ behavior: 'smooth' });
   }, 500); // Adjust timing if needed
 }
 
 function selectOption(option) {
   const genderSection = document.getElementById('gender-section');
   const genderOptions = document.getElementById('genderOptions');
-  const surveyContainer = document.getElementById('surveyContainer');
-  const colorSectionExists = document.getElementById('color-section');
+  const colorSection = document.getElementById('color-section');
 
-  genderSection.classList.add('move-out');
-  genderOptions.classList.add('move-out');
+  genderSection.style.display = 'none';
+  genderOptions.style.display = 'none';
 
-  setTimeout(() => {
-    genderSection.style.display = 'none';
-    genderOptions.style.display = 'none';
+  if (option === 'Lost' || option === 'Found') {
+    if (!colorSection) {
+      const surveyContainer = document.getElementById('surveyContainer');
 
-    if (option === 'Lost' || option === 'Found') {
-      if (!colorSectionExists) {
-        const colorSection = document.createElement('h2');
-        colorSection.textContent = 'Color';
-        colorSection.id = 'color-section';
-        colorSection.classList.add('survey-question', 'animate', 'move-in');
-        surveyContainer.appendChild(colorSection);
+      const colorSection = document.createElement('h2');
+      colorSection.textContent = 'Color';
+      colorSection.id = 'color-section';
+      surveyContainer.appendChild(colorSection);
 
-        const colorSelect = document.createElement('select');
-        colorSelect.id = 'colorSelect';
-        colorSelect.classList.add('select', 'animate', 'move-in');
-        colorSelect.addEventListener('change', () => selectColor(colorSelect.value));
-        const colorOptions = ['Select Color', 'Gray', 'Black', 'White', 'Beige', 'Silver'];
-        colorOptions.forEach((color, index) => {
-          const option = document.createElement('option');
-          option.value = index;
-          option.textContent = color;
-          colorSelect.appendChild(option);
-        });
-        surveyContainer.appendChild(colorSelect);
+      const colorSelect = document.createElement('select');
+      colorSelect.id = 'colorSelect';
+      colorSelect.classList.add('select');
+      colorSelect.addEventListener('change', () => selectColor(colorSelect.value));
+      const colorOptions = ['Select Color', 'Gray', 'Black', 'White', 'Beige', 'Silver'];
+      colorOptions.forEach((color, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = color;
+        colorSelect.appendChild(option);
+      });
+      surveyContainer.appendChild(colorSelect);
 
-        surveyContainer.style.justifyContent = 'center';
-        surveyContainer.style.alignItems = 'center';
-      }
+      // Scroll down to the color section
+      colorSection.scrollIntoView({ behavior: 'smooth' });
     }
-  }, 500); // Adjust timing if needed
+  }
 }
 
 function selectColor(color) {
   const colorSection = document.getElementById('color-section');
   const colorSelect = document.getElementById('colorSelect');
 
-  colorSection.classList.add('move-out');
-  colorSelect.classList.add('move-out');
+  colorSection.style.display = 'none';
+  colorSelect.style.display = 'none';
 
-  setTimeout(() => {
-    colorSection.style.display = 'none';
-    colorSelect.style.display = 'none';
-
-    // Here you can handle submitting the survey or any other action
-    // For now, let's just log the selected color
-    console.log('Selected color:', color);
-  }, 500); // Adjust timing if needed
-}
-
-function fillSurvey() {
-  // Add your logic for handling the survey submission
+  // Here you can handle submitting the survey or any other action
+  // For now, let's just log the selected color
+  console.log('Selected color:', color);
 }
