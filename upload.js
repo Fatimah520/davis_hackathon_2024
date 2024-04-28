@@ -53,3 +53,39 @@ imageInput.addEventListener('change', function() {
   // Send the FormData object with the file to the server
   xhr.send(formData);
 });
+
+//                            //
+
+
+document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(this);
+    try {
+        const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData
+        });
+        if (response.ok) {
+            const data = await response.json();
+            displayPostedInfo(data);
+            this.reset(); // Clear the form after successful submission
+        } else {
+            console.error('Failed to post information');
+        }
+    } catch (error) {
+        console.error('Error posting information:', error);
+    }
+});
+
+function displayPostedInfo(data) {
+    const container = document.getElementById('postedInfoContainer');
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <img src="${data.imageUrl}" alt="Uploaded Image">
+        <p>Description: ${data.description}</p>
+        <p>Location: ${data.location}</p>
+        <p>Pet Breed: ${data.breed}</p>
+    `;
+    container.appendChild(div);
+}
