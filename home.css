@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #076E85;
+}
+
+.navdiv {
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+}
+
+.search-form {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search-mainn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px;
+  border-color: white;
+  background-color: transparent;
+}
+
+#text1 {
+  background-image: url('Screenshots/sliders.svg');
+  background-position: calc(100% - 20px) center;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.search-mainn::placeholder {
+  color: #ccc;
+  padding-left: 5px;
+}
+
+.report {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid white;
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  border-radius: 50px;
+}
+
+a img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  padding: 5px;
+  filter: brightness(0) invert(1);
+}
+
+.lostdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.image-container {
+  text-align: center;
+  margin: 0 10px; /* Adjust margin between images */
+}
+
+.lostdog,
+.founddog,
+.communityimg,
+.emergencyimg {
+  width: 25px; /* Adjust image width as needed */
+  height: 30; /* Maintain aspect ratio */
+}
+
+.communityimg, .emergencyimg {
+  filter: brightness(0) invert(1);
+
+}
+
+.losta,
+.founda,
+.communitya,
+.emergencya {
+  color: white;
+  display: block;
+  font-size: 10px !important;
+  padding: 5px;
+}
+.communityimg {
+  padding-bottom: 7px;
+}
+
+.emergencyimg {
+  padding-bottom: 7px;
+}
+
+
+
+.header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.headerimg {
+  height: auto;
+  max-width: 80%;
+}
+
+.Recent {
+  padding-left: 5%;
+  font-size: 20px;
+  color: white;
+}
