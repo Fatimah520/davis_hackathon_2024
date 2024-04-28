@@ -238,3 +238,44 @@ button {
 .image-container:hover .delete-post {
   display: block;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+input[type="file"] {
+  background-color: orange;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  color: transparent;
+  /* Optional: adjust width and height as needed */
+
+  
+}
+
+.custom-file-input {
+    display: none; /* Hide the default file input */
+}
+
+.upload-btn {
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    /* Optional: adjust width and height as needed */
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 14px;
+}
+
+.find {
+  border-radius: 15px;
+}
+
+

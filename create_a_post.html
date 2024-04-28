@@ -37,32 +37,24 @@
         </div>
     </div>
 
-    <h2 class="survey-question" id="color-section">Color</h2>
-<div class="survey-options">
-    <select class="select" id="colorSelect" onchange="selectColor(this.value)">
-        <option value="0">Select Color</option>
-        <option value="1">Gray</option>
-        <option value="2">Black</option>
-        <option value="3">White</option>
-        <option value="4">Beige</option>
-        <option value="5">Silver</option>
-    </select>
-</div>
+   
 
 <div>
     
 </div>
 
 
-<<<<<<< HEAD
+
 </div>
 
-<!-- <button onclick="fillSurvey()">Post</button> -->
-=======
-<input type="file" id="imageInput" accept="image/*">
-<button onclick="uploadAndFindSimilarPets()">Find Similar Pets</button>
+<div class="container">
+    <label for="fileInput" class="upload-btn">Upload Image</label>
+    <input type="file" id="fileInput" class="custom-file-input" accept="image/*">
+</div>
 
-<button onclick="uploadAndPostImage()">Post</button>
+<button class="find" onclick="uploadAndFindSimilarPets()">Find Similar Pets</button>
+
+<!-- <button onclick="uploadAndPostImage()">Post</button> -->
 
 <div id="uploadedImagesContainer">
     <!-- Container for uploaded images -->
@@ -93,10 +85,7 @@
 
 
 
->>>>>>> 34329627822cb81934ad47012f9ce18d71b05336
 
 <script src="create.js"></script>
 </body>
 </html>
-
-

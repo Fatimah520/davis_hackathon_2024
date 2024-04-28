@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Integration</title>
+<link rel="stylesheet" href="test.css">
+
+</head>
+<body>
+
+<div class="navdiv">
+    <nav class="nav">
+        <a href="home.html" class="logo">FetchFinder</a>
+        <form action="/search" method="get" class="search-form">
+            <input type="search" name="q" id="text1" placeholder="Search" class="search-mainn">
+        </form>
+        <a><img src="Screenshots/chat-dots.svg"></a>
+        <a><img src="Screenshots/person.svg"></a>
+    </nav>
+</div>
+
+<header>
+    <img class="Mainimg" src="Screenshots/Lost-or-found_.png">
+</header>
+
+
+
+<div class="options" id="optionsContainer">
+    <!-- Buttons for the first question -->
+    <button class="lostbutton" onclick="selectOption('Lost')">Lost</button>
+    <button class="foundbutton" onclick="selectOption('Found')">Found</button>
+</div>
+
+<div class="form-container">
+    <form id="petForm" onsubmit="return false;">
+        <label class="question" for="gender">What gender was the dog?</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="unknown">Unknown</option>
+        </select>
+
+        <label class="question" for="size">What size was the dog?</label>
+        <select id="size" name="size">
+            <option value="large">Large</option>
+            <option value="medium">Medium</option>
+            <option value="small">Small</option>
+            <option value="xsmall">Extra Small</option>
+        </select>
+
+        <label class="dogcolor" for="color">What color was the dog?</label>
+        <input  class="question" type="text" id="color" name="color" placeholder="Color">
+
+        <button onclick="submitForm()">Submit</button>
+    </form>
+</div>
+
+
+<script src="testtt.js"></script>
+
+</body>
+</html>

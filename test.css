@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #076E85;
+}
+
+.navdiv {
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.search-form {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search-mainn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px;
+  border-color: white;
+  background-color: transparent;
+}
+
+#text1 {
+  background-image: url('Screenshots/sliders.svg');
+  background-position: calc(100% - 20px) center;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.search-mainn::placeholder {
+  color: #ccc;
+  padding-left: 5px;
+}
+
+a img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  padding: 5px;
+  filter: brightness(0) invert(1);
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Mainimg {
+  justify-content: center;
+  align-items: center;
+  display: absolute;
+  max-width: 30%;
+  max-height: 30%;
+  padding-top: 30px;
+}
+
+.question-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.options {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto; /* This centers the form horizontally */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container label {
+  margin-bottom: 10px;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #076E85;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 90%;
+}
+
+.form-container button:hover {
+  background-color: #055d6d;
+  
+
+}
+
+
+.lostbutton, .foundbutton {
+
+color: #076E85;
+background-color: white;
+padding: 12px 30px;
+border-radius: 30px;
+box-shadow: none;
+border-color: none;
+border: 1px solid white;
+
+}
+
+.options {
+
+  padding-bottom: 20px;
+
+}
+
+.question {
+  color: white;
+  font-size: 17px;
+}
+
+.question {
+  max-width: 96%;
+  height: 17px;
+}
+
+.question::placeholder {
+
+  font-size: 13px;
+  color: black;
+
+}
+
+
+.dogcolor {
+
+  color: white;
+
+}
