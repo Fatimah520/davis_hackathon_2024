@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Fetch Finder</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-  </head>
-  <body>
-   
-    
-    
-    <script src="" async defer></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Uploading the dog image</h1>
+    <!-- Uploading image form -->
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+       
+      <!-- Custom file upload button -->
+        <label for="imageInput" class="custom-file-upload" >
+            <!-- Icon for images to go -->
+            <i class="bi bi-plus-square"></i></i> <!-- Close the <i> tag properly -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16" >
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+            </svg>
+
+            <input type="file" name="image" id="imageInput" style="display:none" accept="image/*">
+
+        </label>
+
+    <!-- Allow user to add description in their post -->
+
+<div>
+        <label for="descriptionInput">Description:</label>
+        <input type="text" id="descriptionInput" name="description">
+    </div>
+    <!-- Location input -->
+    <div>
+        <label for="locationInput">Location:</label>
+        <input type="text" id="locationInput" name="location">
+    </div>
+    <!-- Pet breed input -->
+    <div>
+        <label for="breedInput">Pet Breed:</label>
+        <input type="text" id="breedInput" name="breed">
+    </div>
+    <button type="submit">Post</button>
+</form>
+
+<!-- Container to display posted information -->
+<div id="postedInfoContainer"></div>
+
+
+
+    </form>
+    <!-- Progress bar for file upload -->
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <!-- Feedback message -->
+    <div id="message"></div>
+</div>
+
+  <h2>Flask File Uploads and display</h2>
+<div c
+ 
+
+
+
+<script src="upload.js" async defer></script>
+</body>
 </html>

@@ -1,0 +1,37 @@
+.custom-file-upload {
+    display: inline-block;
+    color: #fff;
+    border: none;
+    padding: 0; /* Remove default padding */
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    background-color: #3498db; /* Set the default background color */
+    overflow: hidden; /* Hide any content that overflows the button */
+    height: 30px;
+    width: 50px; /* Adjust the height as needed */
+}
+
+.custom-file-upload span {
+    font-weight: bold;
+}
+
+.bi.bi-plus-square {
+    size: 50px;
+    font-size: 10px; /* Adjust the icon size */
+    padding-right: 5px; /* Add some right padding to separate the icon from the text */
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+/* Style for hover state */
+.custom-file-upload:hover {
+    background-color: black; /* Change the background color on hover */
+}
+
+/* Style for active state */
+.custom-file-upload:active {
+    background-color: black; /* Change the background color when active */
+}

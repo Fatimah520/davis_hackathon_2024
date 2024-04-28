@@ -1,0 +1,33 @@
+.circular-male-button {
+    display: inline-block;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    font-size: 16px;
+    text-align: center;
+    line-height: 100px; /* Vertically centers text */
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.5s; /* Add transition effect */
+
+}
+
+.circular-female-button {
+    display: inline-block;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background-color: pink; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    font-size: 16px;
+    text-align: center;
+    line-height: 100px; /* Vertically centers text */
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.5s; /* Add transition effect */
+
+}
