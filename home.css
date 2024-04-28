@@ -110,7 +110,6 @@ a img {
 }
 
 
-
 .header {
   justify-content: center;
   align-items: center;
@@ -126,4 +125,8 @@ a img {
   padding-left: 5%;
   font-size: 20px;
   color: white;
+}
+
+.report {
+  text-decoration: none;
 }

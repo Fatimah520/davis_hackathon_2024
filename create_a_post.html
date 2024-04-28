@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Integration</title>
+<link rel="stylesheet" href="create.css">
 </head>
 <body>
-    
-<!--    Creating button to create a post for LOST   -->
-<!-- <button> Lost </button> -->
-<a href="lost.html" class="button-link">Lost</a>
 
-<!--    Creating button to create a post for REPORT   -->
-<button> Report </button>
+<div class="navdiv">
+    <nav class="nav">
+        <a href="home.html" class="logo">FetchFinder</a>
+        <form action="/search" method="get" class="search-form">
+            <input type="search" name="q" id="text1" placeholder="Search" class="search-mainn">
+        </form>
+        <a><img src="Screenshots/chat-dots.svg"></a>
+        <a><img src="Screenshots/person.svg"></a>
+    </nav>
+</div>
 
+<header>
+    <img class="Mainimg" src="Screenshots/Lost-or-found_.png">
+</header>
 
+<div class="buttons" id="buttonsContainer">
+    <a class="losta" href="#" onclick="handleLost()">Lost</a>
+    <a class="founda" href="#">Found</a>
+</div>
+
+<div class="survey-container" id="surveyContainer" style="display: none;">
+    <div class="centered-container">
+        <h2 id="gender-section" class="survey-question">Gender</h2>
+        <div class="survey-options" id="genderOptions">
+            <button class="option" id="male-op" onclick="selectOption('Male')">Male</button>
+            <button class="option" onclick="selectOption('Female')">Female</button>
+        </div>
+    </div>
+
+    <h2 class="survey-question" id="color-section">Color</h2>
+<div class="survey-options">
+    <select class="select" id="colorSelect" onchange="selectColor(this.value)">
+        <option value="0">Select Color</option>
+        <option value="1">Gray</option>
+        <option value="2">Black</option>
+        <option value="3">White</option>
+        <option value="4">Beige</option>
+        <option value="5">Silver</option>
+    </select>
+</div>
+    <div class="survey-answer" id="gender">-</div>
+</div>
+
+<button onclick="fillSurvey()">Post</button>
+
+<script src="create.js"></script>
 </body>
 </html>
+
+
