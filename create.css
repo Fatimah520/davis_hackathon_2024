@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #076E85;
+}
+
+.navdiv {
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.search-form {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search-mainn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px;
+  border-color: white;
+  background-color: transparent;
+}
+
+#text1 {
+  background-image: url('Screenshots/sliders.svg');
+  background-position: calc(100% - 20px) center;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.search-mainn::placeholder {
+  color: #ccc;
+  padding-left: 5px;
+}
+
+a img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  padding: 5px;
+  filter: brightness(0) invert(1);
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Mainimg {
+  justify-content: center;
+  align-items: center;
+  display: absolute;
+  max-width: 30%;
+  max-height: 30%;
+  padding-top: 30px;
+}
+
+.buttons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  gap: 10%; /* Adjust the value to increase or decrease the spacing */
+  padding-top: 13%;
+  padding-bottom: 100%;
+}
+
+.losta, .founda {
+  color: white;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+}
+
+.losta {
+  padding: 20px 40px;
+}
+
+/* Survey Styles */
+
+.survey-container {
+  margin: 50px auto;
+  padding: 10px;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+  display: none; /* Initially hide the survey container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+}
+
+
+
+.survey-question {
+  max-width: 100px;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 50px;
+  margin-top: 0;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.survey-answer {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.survey-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100%;
+}
+
+.option {
+  margin: 0 10px;
+  padding: 20px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#male-op {
+  padding: 10px 40px;
+}
+
+.option:hover {
+  background-color: #ccc;
+  color: white;
+}
+
+.select {
+  background-color: orange;
+  color: white;
+  padding: 10px 55px;
+  border-radius: 25px;
+}
+
+.animate {
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.move-out {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.move-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Add space between male and female buttons */
+.option + .option {
+  margin-left: 60px; /* Adjust as needed */
+}
+
+#surveyContainer {
+  display: none;
+}
+
+#colorContainer {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#colorContainer.show {
+  opacity: 1;
+}

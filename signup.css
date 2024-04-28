@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.left-side {
+  width: 40%;
+  height: 100%;
+  background-color: #076E85;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  max-width: 90%;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right-side {
+  width: 60%;
+  height: auto;
+}
+
+.header {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.SignUp-Header {
+  font-size: 50px;
+}
+
+#create {
+  color: #3979D2;
+}
+
+
+
+.form {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.form-input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-size: 20px;
+  box-shadow: none;
+  border: 1px solid #ccc;
+}
+
+
+#text1 {
+  background-image: url('Screenshots/person-fill.svg');
+  background-position: calc(100% - 20px) center; /* Adjust background position */
+  background-repeat: no-repeat;
+  padding-right: 40px; /* Simulated padding around the background image */
+}
+
+#text2 {
+  background-image: url('Screenshots/key-fill.svg');
+  background-position: calc(100% - 20px) center; /* Adjust background position */
+  background-repeat: no-repeat;
+  padding-right: 40px; /* Simulated padding around the background image */
+  
+}
+
+#text3 {
+  background-image: url('Screenshots/key-fill.svg');
+  background-position: calc(100% - 20px) center; /* Adjust background position */
+  background-repeat: no-repeat;
+  padding-right: 40px; /* Simulated padding around the background image */
+  
+}
+
+
+
+.protection {
+  padding-bottom: 20px;
+  width: 90%;
+}
+
+a.signup-submit {
+  display: inline-block;
+  width: 90%;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+a.signup-submit:hover {
+  background-color: #0056b3;
+}
+
+#SignUp-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #076E85;
+  }
+
+  .left-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #076E85;
+    height: 50vh; /* Adjust the height as needed */
+  }
+
+  .right-side {
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+  }
+
+  .form-input {
+    background-color: transparent;
+    border-color: white;
+  }
+
+  #text1, #text2, #text3 {
+    filter: brightness(0) invert(1); /* Turn background image white */
+  }
+
+  #create {
+    color: white;
+  }
+
+  .img-container {
+    max-width: 90%;
+    position: relative;
+    z-index: 3;
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* Assuming full viewport height */
+  }
+  
+  .img {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+
+ 
+  .header {
+    margin-top: 10%;
+    padding-top: 5%; /* Adjust padding as needed */
+    font-size: 20px; /* Decrease font size */
+  }
+
+  .SignUp-Header {
+    font-size: 30px; /* Decrease font size for the header */
+  }
+
+  .or, .protection, ::placeholder {
+    font-size: 14px; /* Decrease font size for other text */
+  }
+
+  .form-input {
+    background-color: transparent;
+    border-color: white;
+    color: white; /* Adjust input text color */
+    font-size: 16px; /* Decrease font size for form inputs */
+  }
+
+
+
+  .header, .or, .protection, ::placeholder {
+    color: white;
+  }
+}
+
