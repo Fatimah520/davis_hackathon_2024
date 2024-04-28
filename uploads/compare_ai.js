@@ -1,40 +1,41 @@
-const { MongoClient } = require('mongodb');
+// Function to upload the image and then find similar pets
+async function uploadAndFindSimilarPets() {
+    const input = document.getElementById('imageInput');
+    const file = input.files[0];
+    if (!file) return;
+    
+    const formData = new FormData();
+    formData.append('image', file);
 
-// Connection URI
-const uri = 'mongodb://localhost:27017';
+    // Step 1: Upload the image
+    let uploadResponse = await fetch('/upload', {
+        method: 'POST',
+        body: formData
+    });
 
-// Create a new MongoClient
-const client = new MongoClient(uri);
-
-async function main() {
-    try {
-        // Connect the client to the server
-        await client.connect();
-
-        console.log('Connected to MongoDB');
-
-        // Create or select a database
-        const database = client.db('my_database');
-
-        // Create a collection and schema
-        const petsCollection = database.collection('pets');
-
-        // Define the schema
-        const schema = {
-            name: 'string',
-            breed: 'string',
-            age: 'number'
-        };
-
-        // Create indexes
-        await petsCollection.createIndex({ name: 1 });
-        await petsCollection.createIndex({ breed: 1 });
-
-        console.log('Database schema created');
-    } finally {
-        // Close the connection
-        await client.close();
+    if (uploadResponse.ok) {
+        // Step 2: Use the image ID to find similar pets
+        const { image_id } = await uploadResponse.json();
+        findSimilarPets(image_id);
+    } else {
+        console.error('Upload Error:', await uploadResponse.text());
     }
 }
 
-main().catch(console.error);
+// Modified function to find similar pets using an image ID
+async function findSimilarPets(imageId) {
+    const response = await fetch('/find_similar_pets', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ image_id: imageId })
+    });
+
+    if (response.ok) {
+        const similarPets = await response.json();
+        displaySimilarPets(similarPets);
+    } else {
+        console.error('Error finding similar pets:', response.statusText);
+    }
+}
