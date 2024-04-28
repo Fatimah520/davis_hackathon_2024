@@ -51,7 +51,33 @@
     <div class="survey-answer" id="gender">-</div>
 </div>
 
-<button onclick="fillSurvey()">Post</button>
+<button onclick="uploadAndPostImage()">Post</button>
+
+<input type="file" id="imageInput" accept="image/*">
+    <button onclick="uploadAndFindSimilarPets()">Find Similar Pets</button>
+
+    <div id="uploadedImagesContainer">
+    </div>
+    <div id="result" style="display: none;">
+        <h2>Comparison Result</h2>
+        <ul id="resultList"></ul> 
+    </div>
+
+    <div id="similarPetsContainer">
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="create.js"></script>
 </body>
