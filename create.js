@@ -14,13 +14,8 @@ function handleLost() {
     surveyContainer.style.justifyContent = 'center'; // Center horizontally
     surveyContainer.style.alignItems = 'center'; // Center vertically
     surveyContainer.classList.add('animate', 'move-in');
-
-    // Scroll down to the gender section
-    const genderSection = document.getElementById('gender-section');
-    genderSection.scrollIntoView({ behavior: 'smooth' });
   }, 500); // Adjust timing if needed
 }
-
 function selectOption(option) {
   const genderSection = document.getElementById('gender-section');
   const genderOptions = document.getElementById('genderOptions');
