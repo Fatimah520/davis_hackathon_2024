@@ -18,7 +18,7 @@ vision_client = vision.ImageAnnotatorClient()
 # Define route to serve the main HTML page
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('create_a_post.html')
 
 
 # Define function to extract pet features using Google Cloud Vision API

@@ -23,7 +23,7 @@
     <img class="Mainimg" src="Screenshots/Lost-or-found_.png">
 </header>
 
-<div class="buttons" id="buttonsContainer">
+<div class="buttonsssss" id="buttonsContainer">
     <a class="losta" href="#" onclick="handleLost()">Lost</a>
     <a class="founda" href="#">Found</a>
 </div>
@@ -51,17 +51,25 @@
     <div class="survey-answer" id="gender">-</div>
 </div>
 
-<button onclick="uploadAndPostImage()">Post</button>
 
 <input type="file" id="imageInput" accept="image/*">
-    <button onclick="uploadAndFindSimilarPets()">Find Similar Pets</button>
+<button onclick="uploadAndFindSimilarPets()">Find Similar Pets</button>
 
-    <div id="uploadedImagesContainer">
-    </div>
-    <div id="result" style="display: none;">
-        <h2>Comparison Result</h2>
-        <ul id="resultList"></ul> 
-    </div>
+<button onclick="uploadAndPostImage()">Post</button>
+
+<div id="uploadedImagesContainer">
+    <!-- Container for uploaded images -->
+</div>
+
+<div id="result" style="display: none;">
+    <h2>Comparison Result</h2>
+    <ul id="resultList"></ul>
+    
+</div>
+
+<div id="similarPetsContainer">
+    <!-- Container for similar pet images -->
+</div>
 
     <div id="similarPetsContainer">
     </div>

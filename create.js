@@ -68,3 +68,74 @@ function selectColor(color) {
   // For now, let's just log the selected color
   console.log('Selected color:', color);
 }
+
+  
+
+
+// Function to display the uploaded images
+function displayUploadedImages() {
+  const uploadedImagesContainer = document.getElementById('uploadedImagesContainer');
+  uploadedImagesContainer.innerHTML = '';
+  const uploadedImages = retrieveImageData();
+  uploadedImages.forEach(imageData => {
+      const imgContainer = document.createElement('div');
+      imgContainer.classList.add('image-container');
+
+      const img = new Image();
+      img.src = imageData;
+      img.alt = 'Uploaded Image';
+
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete Post';
+      deleteButton.classList.add('delete-post');
+      deleteButton.onclick = () => deleteImage(imageData);
+
+      imgContainer.appendChild(img);
+      imgContainer.appendChild(deleteButton);
+      uploadedImagesContainer.appendChild(imgContainer);
+  });
+}
+
+// Function to store image data in local storage
+function storeImageData(imageData) {
+  const uploadedImages = JSON.parse(localStorage.getItem('uploadedImages')) || [];
+  uploadedImages.push(imageData);
+  localStorage.setItem('uploadedImages', JSON.stringify(uploadedImages));
+}
+
+// Function to retrieve image data from local storage
+function retrieveImageData() {
+  return JSON.parse(localStorage.getItem('uploadedImages')) || [];
+}
+
+// Function to delete an uploaded image
+function deleteImage(imageData) {
+  const uploadedImages = retrieveImageData().filter(img => img !== imageData);
+  localStorage.setItem('uploadedImages', JSON.stringify(uploadedImages));
+  displayUploadedImages();
+}
+
+// Function to handle image upload and finding similar pets
+async function uploadAndFindSimilarPets() {
+  // Your implementation for finding similar pets goes here
+}
+
+// Function to handle image upload and posting
+async function uploadAndPostImage() {
+  const input = document.getElementById('imageInput');
+  const file = input.files[0];
+  if (!file) return;
+
+  // Display the uploaded image
+  const imageUrl = URL.createObjectURL(file);
+  storeImageData(imageUrl);
+  displayUploadedImages();
+
+  // You can also trigger further actions such as sending the image to the server for processing
+  // Your implementation for sending the image to the server goes here
+}
+
+// Check if there are uploaded images in local storage and display them
+window.onload = function() {
+  displayUploadedImages();
+};

@@ -73,7 +73,7 @@ header {
   padding-top: 30px;
 }
 
-.buttons {
+.buttonsssss {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -214,4 +214,27 @@ button {
 
 #colorContainer.show {
   opacity: 1;
+}
+
+
+
+.image-container {
+  position: relative;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.delete-post {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  display: none;
+}
+.image-container:hover .delete-post {
+  display: block;
 }
