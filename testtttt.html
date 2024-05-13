@@ -52,7 +52,23 @@
         <label class="dogcolor" for="color">What color was the dog?</label>
         <input  class="question" type="text" id="color" name="color" placeholder="Color">
 
-        <button onclick="submitForm()">Submit</button>
+        <div class="container">
+            <input type="file" id="fileInput" class="custom-file-input" accept="image/*">
+        </div>
+        
+        
+        <button onclick="redirectToHome()">Post</button>
+        
+        <div id="uploadedImagesContainer">
+            <!-- Container for uploaded images -->
+        </div>
+        
+        <div id="result" style="display: none;">
+            <h2>Comparison Result</h2>
+            <ul id="resultList"></ul>
+            
+        </div>
+
     </form>
 </div>
 
