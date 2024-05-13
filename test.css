@@ -68,9 +68,9 @@ header {
   justify-content: center;
   align-items: center;
   display: absolute;
-  max-width: 30%;
-  max-height: 30%;
-  padding-top: 30px;
+  max-width: 20%;
+  max-height: 20%;
+  padding-top: 20px;
 }
 
 .question-container {
